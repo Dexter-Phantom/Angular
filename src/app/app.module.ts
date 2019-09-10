@@ -9,6 +9,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ProgressComponent } from './pages/progress/progress.component';
 import { Grafic1Component } from './pages/grafic1/grafic1.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { HeaderComponent } from './shared/header/header.component';
     ProgressComponent,
     Grafic1Component,
     HeaderComponent,
+    SidebarComponent,
+    BreadcrumbsComponent,
   ],
   imports: [
     BrowserModule,
