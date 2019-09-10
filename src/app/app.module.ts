@@ -8,6 +8,7 @@ import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ProgressComponent } from './pages/progress/progress.component';
 import { Grafic1Component } from './pages/grafic1/grafic1.component';
+import { HeaderComponent } from './shared/header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { Grafic1Component } from './pages/grafic1/grafic1.component';
     DashboardComponent,
     ProgressComponent,
     Grafic1Component,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
