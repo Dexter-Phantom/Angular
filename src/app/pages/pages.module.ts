@@ -1,4 +1,5 @@
-import { NgModule } from "@angular/core";
+import { NgModule } from '@angular/core';
+import { PAGES_ROUTES } from './pages.routes';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Grafic1Component } from './grafic1/grafic1.component';
@@ -14,16 +15,14 @@ import { SharedModule } from '../shared/shared.module';
         Grafic1Component
     ],
     exports: [
-        PagesComponent,
         DashboardComponent,
         ProgressComponent,
         Grafic1Component
     ],
     imports: [
-        SharedModule
+        SharedModule,
+        PAGES_ROUTES
     ]
 })
 
-export class PagesModule {
-
-}
+export class PagesModule {}
