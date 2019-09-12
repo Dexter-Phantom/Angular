@@ -3,10 +3,12 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Grafic1Component } from './grafic1/grafic1.component';
+console.log('coner');
 
 const pagesRoutes: Routes = [
     {
-        path: '', component: PagesComponent,
+        path: '',
+        component: PagesComponent,
         children: [
             {path: 'dashboard', component: DashboardComponent},
             {path: 'progress', component: ProgressComponent},

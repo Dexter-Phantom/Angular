@@ -6,15 +6,17 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
     declarations: [
-        BreadcrumbsComponent,
+        NopagefoundComponent,
         HeaderComponent,
         SidebarComponent,
+        BreadcrumbsComponent,
         NopagefoundComponent
     ],
     exports: [
-        BreadcrumbsComponent,
+        NopagefoundComponent,
         HeaderComponent,
         SidebarComponent,
+        BreadcrumbsComponent,
         NopagefoundComponent
     ]
 })
