@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-increment',
@@ -8,7 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class IncrementComponent implements OnInit {
 
   @Input('name') percent: number = 50;
+  @Input() percentOne: number = 60;
   @Input() legend: string = 'Legend';
+
+  @Output() changeValueZero: EventEmitter<number> = new EventEmitter();
 
   constructor() {
 
@@ -31,6 +34,7 @@ export class IncrementComponent implements OnInit {
     }
 
     this.percent = this.percent + valor;
+    this.changeValueZero.emit(this.percent);
     return;
   }
 }
