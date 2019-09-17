@@ -16,7 +16,6 @@ export class ProgressComponent implements OnInit {
 
   updateZero = (event: number) => {
     console.log(event, 'event');
-    
   }
 
 }
