@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-increment',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IncrementComponent implements OnInit {
 
-  percent: number = 50;
-  legend: string = 'Legend';
-  constructor() { }
+  @Input('name') percent: number = 50;
+  @Input() legend: string = 'Legend';
+
+  constructor() {
+
+    console.log('percent', this.percent);
+    console.log('legend', this.legend);
+
+  }
 
   ngOnInit() {
   }
