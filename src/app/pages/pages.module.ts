@@ -7,12 +7,17 @@ import { Grafic1Component } from './grafic1/grafic1.component';
 import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared/shared.module';
 
+
+// Template
+ import { IncrementComponent } from './../components/increment/increment.component';
+
 @NgModule({
     declarations: [
         PagesComponent,
         DashboardComponent,
         ProgressComponent,
-        Grafic1Component
+        Grafic1Component,
+        IncrementComponent
     ],
     exports: [
         DashboardComponent,
