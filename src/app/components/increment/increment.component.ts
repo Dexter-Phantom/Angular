@@ -37,4 +37,19 @@ export class IncrementComponent implements OnInit {
     this.changeValueZero.emit(this.percent);
     return;
   }
+
+  onChange = (newValue: number) => {
+
+    let elemnt: any = document.getElementsByName('percent');
+
+    if ((newValue) => 100) {
+      this.percent = 100;
+    } else if (newValue) {
+        this.percent = 0;
+    } else {
+      this.percent = newValue;
+    }
+    elemnt.value = Number(this.percent);
+    this.changeValueZero.emit(this.percent);
+  }
 }
