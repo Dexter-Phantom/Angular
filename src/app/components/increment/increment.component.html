@@ -5,7 +5,7 @@
             <i class="mdi mdi-plus"></i>
         </button>
     </div>
-    <input type="number" class="form-control" placeholder="Value" [(ngModel)]="percent" (ngModelChange)="onChange($event)" name="percent" min="1" max="100">
+    <input #txtProgress type="number" class="form-control" placeholder="Value" [(ngModel)]="percent" (ngModelChange)="onChange($event)" name="percent" min="1" max="100">
     <div class="input-group-prepend">
         <button class="btn btn-outline-secondary" type="button" id="button-addon1" (click)="changeValue(-1)">
             <i class="mdi mdi-minus"></i>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-increment',
@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styles: []
 })
 export class IncrementComponent implements OnInit {
-
+  @ViewChild('txtProgress')  txtProgress: ElementRef;
   @Input('name') percent: number = 50;
   @Input() percentOne: number = 60;
   @Input() legend: string = 'Legend';
@@ -39,9 +39,6 @@ export class IncrementComponent implements OnInit {
   }
 
   onChange = (newValue: number) => {
-
-    let elemnt: any = document.getElementsByName('percent');
-
     if ((newValue) => 100) {
       this.percent = 100;
     } else if (newValue) {
@@ -49,7 +46,8 @@ export class IncrementComponent implements OnInit {
     } else {
       this.percent = newValue;
     }
-    elemnt.value = Number(this.percent);
+    this.txtProgress.nativeElement.value = Number(this.percent);
     this.changeValueZero.emit(this.percent);
+    this.txtProgress.nativeElement.focus();
   }
 }
