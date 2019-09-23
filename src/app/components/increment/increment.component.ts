@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef }
   styles: []
 })
 export class IncrementComponent implements OnInit {
-  @ViewChild('txtProgress')  txtProgress: ElementRef;
+  @ViewChild('txtProgress', {static: false})  txtProgress: ElementRef;
   @Input('name') percent: number = 50;
   @Input() percentOne: number = 60;
   @Input() legend: string = 'Legend';
