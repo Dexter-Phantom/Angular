@@ -39,7 +39,8 @@ export class IncrementComponent implements OnInit {
   }
 
   onChange = (newValue: number) => {
-    if ((newValue) => 100) {
+    // tslint:disable-next-line: no-shadowed-variable
+    if ((newValue: any) => 100) {
       this.percent = 100;
     } else if (newValue) {
         this.percent = 0;

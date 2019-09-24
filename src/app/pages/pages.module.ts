@@ -9,8 +9,9 @@ import { SharedModule } from '../shared/shared.module';
 
 
 // Template
- import { IncrementComponent } from './../components/increment/increment.component';
+import { IncrementComponent } from './../components/increment/increment.component';
 import { ChartsModule } from 'ng2-charts';
+import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import { ChartsModule } from 'ng2-charts';
         DashboardComponent,
         ProgressComponent,
         Grafic1Component,
-        IncrementComponent
+        IncrementComponent,
+        DoughnutChartComponent
     ],
     exports: [
         DashboardComponent,
