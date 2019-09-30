@@ -26,8 +26,7 @@
             "styles": [
               "src/styles.css",
               "src/assets/plugins/bootstrap/css/bootstrap.min.css",
-              "src/assets/plugins/bootstrap/css/stylet.css",
-              "src/assets/css/colors/default-dark.css"
+              "src/assets/plugins/bootstrap/css/stylet.css"
             ],
             "scripts": [
               "src/assets/plugins/jquery/jquery.min.js",
