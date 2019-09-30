@@ -12,6 +12,7 @@ import { SharedModule } from '../shared/shared.module';
 import { IncrementComponent } from './../components/increment/increment.component';
 import { ChartsModule } from 'ng2-charts';
 import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.componen
         ProgressComponent,
         Grafic1Component,
         IncrementComponent,
-        DoughnutChartComponent
+        DoughnutChartComponent,
+        SettingsComponent
     ],
     exports: [
         DashboardComponent,
