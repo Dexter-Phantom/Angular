@@ -13,8 +13,14 @@ export class SettingsComponent implements OnInit {
   ngOnInit() {
   }
 
-  changeColor = (color: string) => {
+  changeColor = (color: string, link: any) => {
     this._document.getElementById('theme').setAttribute('href', `assets/css/colors/${color}.css`);
+    this.applyCheck(link);
   }
 
+  applyCheck = (link: any) => {
+    const selectores = this._document.getElementsByClassName('selector');
+    for (const ref of selectores) { ref.classList.remove('working'); }
+    link.classList.add('working');
+  }
 }
