@@ -8,6 +8,7 @@ import { DOCUMENT } from '@angular/common';
 })
 export class SettingsComponent implements OnInit {
 
+  // tslint:disable-next-line: variable-name
   constructor( @Inject(DOCUMENT) private _document ) { }
 
   ngOnInit() {
