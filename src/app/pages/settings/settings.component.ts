@@ -1,3 +1,4 @@
+import { SettingsService } from './../../services/settings.service';
 import { Component, OnInit, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
@@ -9,14 +10,18 @@ import { DOCUMENT } from '@angular/common';
 export class SettingsComponent implements OnInit {
 
   // tslint:disable-next-line: variable-name
-  constructor( @Inject(DOCUMENT) private _document ) { }
+  constructor( @Inject(DOCUMENT) private _document, public _services: SettingsService ) { }
 
   ngOnInit() {
   }
 
   changeColor = (color: string, link: any) => {
-    this._document.getElementById('theme').setAttribute('href', `assets/css/colors/${color}.css`);
+    const url = `assets/css/colors/${color}.css`;
+    this._document.getElementById('theme').setAttribute('href', url);
     this.applyCheck(link);
+    this._services.settings.theme = color;
+    this._services.settings.themeUrl = url;
+    this._services.saveSettings();
   }
 
   applyCheck = (link: any) => {
