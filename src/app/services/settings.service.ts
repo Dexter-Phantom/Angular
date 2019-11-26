@@ -15,10 +15,7 @@ export class SettingsService {
     this.loadSettings();
    }
 
-  saveSettings = () => {
-    localStorage.setItem('settings', JSON.stringify(this.settings));
-    console.log(localStorage.getItem('settings'), 'ok');
-  }
+  saveSettings = () => localStorage.setItem('settings', JSON.stringify(this.settings));
 
   loadSettings = () => {
     if (localStorage.getItem('settings')) {
@@ -29,12 +26,9 @@ export class SettingsService {
     }
   }
 
-  apliedTheme = () => {
-    this._document.getElementById('theme').setAttribute('href', this.settings.themeUrl);
-  }
+  apliedTheme = () => this._document.getElementById('theme').setAttribute('href', this.settings.themeUrl);
 
 }
-
 
 interface AdviceSettings {
   themeUrl: string;
