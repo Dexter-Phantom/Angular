@@ -1,4 +1,4 @@
-import { SettingsService } from './../../services/settings.service';
+import { SettingsService } from '../../services/service.index';
 import { Component, OnInit, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
