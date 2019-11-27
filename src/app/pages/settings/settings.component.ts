@@ -13,6 +13,7 @@ export class SettingsComponent implements OnInit {
   constructor( @Inject(DOCUMENT) private _document, public _services: SettingsService ) { }
 
   ngOnInit() {
+    this.putOnCheck();
   }
 
   changeColor = (color: string, link: any) => {
@@ -29,4 +30,17 @@ export class SettingsComponent implements OnInit {
     for (const ref of selectores) { ref.classList.remove('working'); }
     link.classList.add('working');
   }
+
+  putOnCheck = () => {
+    const selectores = this._document.getElementsByClassName('selector');
+    // tslint:disable-next-line:prefer-const
+    let theme = this._services.settings.theme;
+    for (const ref of selectores) {
+      if (ref.getAttribute('data-theme') === theme) {
+        ref.classList.add('working');
+        break;
+      }
+     }
+  }
+
 }
