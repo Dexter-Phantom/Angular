@@ -10,9 +10,6 @@ export class SidebarComponent implements OnInit {
   // tslint:disable-next-line: variable-name
   constructor(public _service: SidebarService) { }
 
-  ngOnInit() {
-    console.log(this._service);
-    const menus: any = this._service;
-  }
+  ngOnInit() { }
 
 }
