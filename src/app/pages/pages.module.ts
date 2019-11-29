@@ -13,6 +13,7 @@ import { IncrementComponent } from './../components/increment/increment.componen
 import { ChartsModule } from 'ng2-charts';
 import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
 import { SettingsComponent } from './settings/settings.component';
+import { PromisesComponent } from './promises/promises.component';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import { SettingsComponent } from './settings/settings.component';
         Grafic1Component,
         IncrementComponent,
         DoughnutChartComponent,
-        SettingsComponent
+        SettingsComponent,
+        PromisesComponent
     ],
     exports: [
         DashboardComponent,
